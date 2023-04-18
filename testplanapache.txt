@@ -1,0 +1,1461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+-<jmeterTestPlan jmeter="5.5" properties="5.0" version="1.2">
+
+
+-<hashTree>
+
+
+-<TestPlan enabled="true" testname="Lesson24" testclass="TestPlan" guiclass="TestPlanGui">
+
+<stringProp name="TestPlan.comments"/>
+
+<boolProp name="TestPlan.functional_mode">false</boolProp>
+
+<boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+
+<boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+
+
+-<elementProp enabled="true" testname="User Defined Variables" testclass="Arguments" guiclass="ArgumentsPanel" name="TestPlan.user_defined_variables" elementType="Arguments">
+
+<collectionProp name="Arguments.arguments"/>
+
+</elementProp>
+
+<stringProp name="TestPlan.user_define_classpath"/>
+
+</TestPlan>
+
+
+-<hashTree>
+
+
+-<ThreadGroup enabled="true" testname="Homework24" testclass="ThreadGroup" guiclass="ThreadGroupGui">
+
+<stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+
+
+-<elementProp enabled="true" testname="Loop Controller" testclass="LoopController" guiclass="LoopControlPanel" name="ThreadGroup.main_controller" elementType="LoopController">
+
+<boolProp name="LoopController.continue_forever">false</boolProp>
+
+<stringProp name="LoopController.loops">3</stringProp>
+
+</elementProp>
+
+<stringProp name="ThreadGroup.num_threads">5</stringProp>
+
+<stringProp name="ThreadGroup.ramp_time">1</stringProp>
+
+<boolProp name="ThreadGroup.scheduler">false</boolProp>
+
+<stringProp name="ThreadGroup.duration"/>
+
+<stringProp name="ThreadGroup.delay"/>
+
+<boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+
+</ThreadGroup>
+
+
+-<hashTree>
+
+
+-<ConfigTestElement enabled="true" testname="HTTP Request Defaults" testclass="ConfigTestElement" guiclass="HttpDefaultsGui">
+
+
+-<elementProp enabled="true" testname="User Defined Variables" testclass="Arguments" guiclass="HTTPArgumentsPanel" name="HTTPsampler.Arguments" elementType="Arguments">
+
+
+-<collectionProp name="Arguments.arguments">
+
+
+-<elementProp name="" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value"/>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+</elementProp>
+
+</collectionProp>
+
+</elementProp>
+
+<stringProp name="HTTPSampler.domain">jsonplaceholder.typicode.com</stringProp>
+
+<stringProp name="HTTPSampler.port"/>
+
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+
+<stringProp name="HTTPSampler.contentEncoding"/>
+
+<stringProp name="HTTPSampler.path">/post</stringProp>
+
+<stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+
+<stringProp name="HTTPSampler.connect_timeout"/>
+
+<stringProp name="HTTPSampler.response_timeout"/>
+
+</ConfigTestElement>
+
+<hashTree/>
+
+
+-<HTTPSamplerProxy enabled="true" testname="HTTP Request GET" testclass="HTTPSamplerProxy" guiclass="HttpTestSampleGui">
+
+
+-<elementProp enabled="true" testname="User Defined Variables" testclass="Arguments" guiclass="HTTPArgumentsPanel" name="HTTPsampler.Arguments" elementType="Arguments">
+
+
+-<collectionProp name="Arguments.arguments">
+
+
+-<elementProp name="" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value"/>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+</elementProp>
+
+</collectionProp>
+
+</elementProp>
+
+<stringProp name="HTTPSampler.domain">jsonplaceholder.typicode.com</stringProp>
+
+<stringProp name="HTTPSampler.port"/>
+
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+
+<stringProp name="HTTPSampler.contentEncoding"/>
+
+<stringProp name="HTTPSampler.path">/posts</stringProp>
+
+<stringProp name="HTTPSampler.method">GET</stringProp>
+
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+
+<boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+
+<stringProp name="HTTPSampler.embedded_url_re"/>
+
+<stringProp name="HTTPSampler.connect_timeout"/>
+
+<stringProp name="HTTPSampler.response_timeout"/>
+
+</HTTPSamplerProxy>
+
+
+-<hashTree>
+
+
+-<ResultCollector enabled="true" testname="View Results Tree" testclass="ResultCollector" guiclass="ViewResultsFullVisualizer">
+
+<boolProp name="ResultCollector.error_logging">false</boolProp>
+
+
+-<objProp>
+
+<name>saveConfig</name>
+
+
+-<value class="SampleSaveConfiguration">
+
+<time>true</time>
+
+<latency>true</latency>
+
+<timestamp>true</timestamp>
+
+<success>true</success>
+
+<label>true</label>
+
+<code>true</code>
+
+<message>true</message>
+
+<threadName>true</threadName>
+
+<dataType>true</dataType>
+
+<encoding>false</encoding>
+
+<assertions>true</assertions>
+
+<subresults>true</subresults>
+
+<responseData>false</responseData>
+
+<samplerData>false</samplerData>
+
+<xml>false</xml>
+
+<fieldNames>true</fieldNames>
+
+<responseHeaders>false</responseHeaders>
+
+<requestHeaders>false</requestHeaders>
+
+<responseDataOnError>false</responseDataOnError>
+
+<saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+
+<assertionsResultsToSave>0</assertionsResultsToSave>
+
+<bytes>true</bytes>
+
+<sentBytes>true</sentBytes>
+
+<url>true</url>
+
+<threadCounts>true</threadCounts>
+
+<idleTime>true</idleTime>
+
+<connectTime>true</connectTime>
+
+</value>
+
+</objProp>
+
+<stringProp name="filename"/>
+
+</ResultCollector>
+
+<hashTree/>
+
+
+-<SizeAssertion enabled="true" testname="Size Assertion" testclass="SizeAssertion" guiclass="SizeAssertionGui">
+
+<stringProp name="Assertion.test_field">SizeAssertion.response_network_size</stringProp>
+
+<stringProp name="SizeAssertion.size">10</stringProp>
+
+<intProp name="SizeAssertion.operator">3</intProp>
+
+</SizeAssertion>
+
+<hashTree/>
+
+</hashTree>
+
+
+-<HTTPSamplerProxy enabled="true" testname="HTTP Request Post" testclass="HTTPSamplerProxy" guiclass="HttpTestSampleGui">
+
+
+-<elementProp enabled="true" testname="User Defined Variables" testclass="Arguments" guiclass="HTTPArgumentsPanel" name="HTTPsampler.Arguments" elementType="Arguments">
+
+
+-<collectionProp name="Arguments.arguments">
+
+
+-<elementProp name="userId" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value">1</stringProp>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+<stringProp name="Argument.name">userId</stringProp>
+
+</elementProp>
+
+
+-<elementProp name="Id" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value">1</stringProp>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+<stringProp name="Argument.name">Id</stringProp>
+
+</elementProp>
+
+
+-<elementProp name="title" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value">hw24</stringProp>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+<stringProp name="Argument.name">title</stringProp>
+
+</elementProp>
+
+
+-<elementProp name="body" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value">lesson</stringProp>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+<stringProp name="Argument.name">body</stringProp>
+
+</elementProp>
+
+
+-<elementProp name="" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value"/>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+</elementProp>
+
+
+-<elementProp name="" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value"/>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+</elementProp>
+
+</collectionProp>
+
+</elementProp>
+
+<stringProp name="HTTPSampler.domain">jsonplaceholder.typicode.com</stringProp>
+
+<stringProp name="HTTPSampler.port"/>
+
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+
+<stringProp name="HTTPSampler.contentEncoding"/>
+
+<stringProp name="HTTPSampler.path">/posts</stringProp>
+
+<stringProp name="HTTPSampler.method">POST</stringProp>
+
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+
+<boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+
+<stringProp name="HTTPSampler.embedded_url_re"/>
+
+<stringProp name="HTTPSampler.connect_timeout"/>
+
+<stringProp name="HTTPSampler.response_timeout"/>
+
+</HTTPSamplerProxy>
+
+
+-<hashTree>
+
+
+-<ResultCollector enabled="true" testname="View Results Tree" testclass="ResultCollector" guiclass="ViewResultsFullVisualizer">
+
+<boolProp name="ResultCollector.error_logging">false</boolProp>
+
+
+-<objProp>
+
+<name>saveConfig</name>
+
+
+-<value class="SampleSaveConfiguration">
+
+<time>true</time>
+
+<latency>true</latency>
+
+<timestamp>true</timestamp>
+
+<success>true</success>
+
+<label>true</label>
+
+<code>true</code>
+
+<message>true</message>
+
+<threadName>true</threadName>
+
+<dataType>true</dataType>
+
+<encoding>false</encoding>
+
+<assertions>true</assertions>
+
+<subresults>true</subresults>
+
+<responseData>false</responseData>
+
+<samplerData>false</samplerData>
+
+<xml>false</xml>
+
+<fieldNames>true</fieldNames>
+
+<responseHeaders>false</responseHeaders>
+
+<requestHeaders>false</requestHeaders>
+
+<responseDataOnError>false</responseDataOnError>
+
+<saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+
+<assertionsResultsToSave>0</assertionsResultsToSave>
+
+<bytes>true</bytes>
+
+<sentBytes>true</sentBytes>
+
+<url>true</url>
+
+<threadCounts>true</threadCounts>
+
+<idleTime>true</idleTime>
+
+<connectTime>true</connectTime>
+
+</value>
+
+</objProp>
+
+<stringProp name="filename"/>
+
+</ResultCollector>
+
+<hashTree/>
+
+
+-<SizeAssertion enabled="true" testname="Size Assertion" testclass="SizeAssertion" guiclass="SizeAssertionGui">
+
+<stringProp name="Assertion.test_field">SizeAssertion.response_network_size</stringProp>
+
+<stringProp name="SizeAssertion.size">10</stringProp>
+
+<intProp name="SizeAssertion.operator">3</intProp>
+
+</SizeAssertion>
+
+<hashTree/>
+
+</hashTree>
+
+
+-<HTTPSamplerProxy enabled="true" testname="HTTP Request Put" testclass="HTTPSamplerProxy" guiclass="HttpTestSampleGui">
+
+
+-<elementProp enabled="true" testname="User Defined Variables" testclass="Arguments" guiclass="HTTPArgumentsPanel" name="HTTPsampler.Arguments" elementType="Arguments">
+
+
+-<collectionProp name="Arguments.arguments">
+
+
+-<elementProp name="userId" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value">1</stringProp>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+<stringProp name="Argument.name">userId</stringProp>
+
+</elementProp>
+
+
+-<elementProp name="Id" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value">1</stringProp>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+<stringProp name="Argument.name">Id</stringProp>
+
+</elementProp>
+
+
+-<elementProp name="title" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value">hw24</stringProp>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+<stringProp name="Argument.name">title</stringProp>
+
+</elementProp>
+
+
+-<elementProp name="body" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value">lesson</stringProp>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+<stringProp name="Argument.name">body</stringProp>
+
+</elementProp>
+
+
+-<elementProp name="" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value"/>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+</elementProp>
+
+
+-<elementProp name="" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value"/>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+</elementProp>
+
+</collectionProp>
+
+</elementProp>
+
+<stringProp name="HTTPSampler.domain">jsonplaceholder.typicode.com</stringProp>
+
+<stringProp name="HTTPSampler.port"/>
+
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+
+<stringProp name="HTTPSampler.contentEncoding"/>
+
+<stringProp name="HTTPSampler.path">/posts/1</stringProp>
+
+<stringProp name="HTTPSampler.method">PUT</stringProp>
+
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+
+<boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+
+<stringProp name="HTTPSampler.embedded_url_re"/>
+
+<stringProp name="HTTPSampler.connect_timeout"/>
+
+<stringProp name="HTTPSampler.response_timeout"/>
+
+</HTTPSamplerProxy>
+
+
+-<hashTree>
+
+
+-<ResultCollector enabled="true" testname="View Results Tree" testclass="ResultCollector" guiclass="ViewResultsFullVisualizer">
+
+<boolProp name="ResultCollector.error_logging">false</boolProp>
+
+
+-<objProp>
+
+<name>saveConfig</name>
+
+
+-<value class="SampleSaveConfiguration">
+
+<time>true</time>
+
+<latency>true</latency>
+
+<timestamp>true</timestamp>
+
+<success>true</success>
+
+<label>true</label>
+
+<code>true</code>
+
+<message>true</message>
+
+<threadName>true</threadName>
+
+<dataType>true</dataType>
+
+<encoding>false</encoding>
+
+<assertions>true</assertions>
+
+<subresults>true</subresults>
+
+<responseData>false</responseData>
+
+<samplerData>false</samplerData>
+
+<xml>false</xml>
+
+<fieldNames>true</fieldNames>
+
+<responseHeaders>false</responseHeaders>
+
+<requestHeaders>false</requestHeaders>
+
+<responseDataOnError>false</responseDataOnError>
+
+<saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+
+<assertionsResultsToSave>0</assertionsResultsToSave>
+
+<bytes>true</bytes>
+
+<sentBytes>true</sentBytes>
+
+<url>true</url>
+
+<threadCounts>true</threadCounts>
+
+<idleTime>true</idleTime>
+
+<connectTime>true</connectTime>
+
+</value>
+
+</objProp>
+
+<stringProp name="filename"/>
+
+</ResultCollector>
+
+<hashTree/>
+
+
+-<SizeAssertion enabled="true" testname="Size Assertion" testclass="SizeAssertion" guiclass="SizeAssertionGui">
+
+<stringProp name="Assertion.test_field">SizeAssertion.response_network_size</stringProp>
+
+<stringProp name="SizeAssertion.size">10</stringProp>
+
+<intProp name="SizeAssertion.operator">3</intProp>
+
+</SizeAssertion>
+
+<hashTree/>
+
+</hashTree>
+
+
+-<HTTPSamplerProxy enabled="true" testname="HTTP Request Patch" testclass="HTTPSamplerProxy" guiclass="HttpTestSampleGui">
+
+
+-<elementProp enabled="true" testname="User Defined Variables" testclass="Arguments" guiclass="HTTPArgumentsPanel" name="HTTPsampler.Arguments" elementType="Arguments">
+
+
+-<collectionProp name="Arguments.arguments">
+
+
+-<elementProp name="userId" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value">1</stringProp>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+<stringProp name="Argument.name">userId</stringProp>
+
+</elementProp>
+
+
+-<elementProp name="Id" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value">1</stringProp>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+<stringProp name="Argument.name">Id</stringProp>
+
+</elementProp>
+
+
+-<elementProp name="title" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value">hw24</stringProp>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+<stringProp name="Argument.name">title</stringProp>
+
+</elementProp>
+
+
+-<elementProp name="body" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value">lesson</stringProp>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+<stringProp name="Argument.name">body</stringProp>
+
+</elementProp>
+
+
+-<elementProp name="" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value"/>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+</elementProp>
+
+
+-<elementProp name="" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value"/>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+</elementProp>
+
+</collectionProp>
+
+</elementProp>
+
+<stringProp name="HTTPSampler.domain">jsonplaceholder.typicode.com</stringProp>
+
+<stringProp name="HTTPSampler.port"/>
+
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+
+<stringProp name="HTTPSampler.contentEncoding"/>
+
+<stringProp name="HTTPSampler.path">/posts/1</stringProp>
+
+<stringProp name="HTTPSampler.method">PATCH</stringProp>
+
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+
+<boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+
+<stringProp name="HTTPSampler.embedded_url_re"/>
+
+<stringProp name="HTTPSampler.connect_timeout"/>
+
+<stringProp name="HTTPSampler.response_timeout"/>
+
+</HTTPSamplerProxy>
+
+
+-<hashTree>
+
+
+-<ResultCollector enabled="true" testname="View Results Tree" testclass="ResultCollector" guiclass="ViewResultsFullVisualizer">
+
+<boolProp name="ResultCollector.error_logging">false</boolProp>
+
+
+-<objProp>
+
+<name>saveConfig</name>
+
+
+-<value class="SampleSaveConfiguration">
+
+<time>true</time>
+
+<latency>true</latency>
+
+<timestamp>true</timestamp>
+
+<success>true</success>
+
+<label>true</label>
+
+<code>true</code>
+
+<message>true</message>
+
+<threadName>true</threadName>
+
+<dataType>true</dataType>
+
+<encoding>false</encoding>
+
+<assertions>true</assertions>
+
+<subresults>true</subresults>
+
+<responseData>false</responseData>
+
+<samplerData>false</samplerData>
+
+<xml>false</xml>
+
+<fieldNames>true</fieldNames>
+
+<responseHeaders>false</responseHeaders>
+
+<requestHeaders>false</requestHeaders>
+
+<responseDataOnError>false</responseDataOnError>
+
+<saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+
+<assertionsResultsToSave>0</assertionsResultsToSave>
+
+<bytes>true</bytes>
+
+<sentBytes>true</sentBytes>
+
+<url>true</url>
+
+<threadCounts>true</threadCounts>
+
+<idleTime>true</idleTime>
+
+<connectTime>true</connectTime>
+
+</value>
+
+</objProp>
+
+<stringProp name="filename"/>
+
+</ResultCollector>
+
+<hashTree/>
+
+
+-<SizeAssertion enabled="true" testname="Size Assertion" testclass="SizeAssertion" guiclass="SizeAssertionGui">
+
+<stringProp name="Assertion.test_field">SizeAssertion.response_network_size</stringProp>
+
+<stringProp name="SizeAssertion.size">10</stringProp>
+
+<intProp name="SizeAssertion.operator">3</intProp>
+
+</SizeAssertion>
+
+<hashTree/>
+
+
+-<ResultCollector enabled="true" testname="View Results Tree" testclass="ResultCollector" guiclass="ViewResultsFullVisualizer">
+
+<boolProp name="ResultCollector.error_logging">false</boolProp>
+
+
+-<objProp>
+
+<name>saveConfig</name>
+
+
+-<value class="SampleSaveConfiguration">
+
+<time>true</time>
+
+<latency>true</latency>
+
+<timestamp>true</timestamp>
+
+<success>true</success>
+
+<label>true</label>
+
+<code>true</code>
+
+<message>true</message>
+
+<threadName>true</threadName>
+
+<dataType>true</dataType>
+
+<encoding>false</encoding>
+
+<assertions>true</assertions>
+
+<subresults>true</subresults>
+
+<responseData>false</responseData>
+
+<samplerData>false</samplerData>
+
+<xml>false</xml>
+
+<fieldNames>true</fieldNames>
+
+<responseHeaders>false</responseHeaders>
+
+<requestHeaders>false</requestHeaders>
+
+<responseDataOnError>false</responseDataOnError>
+
+<saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+
+<assertionsResultsToSave>0</assertionsResultsToSave>
+
+<bytes>true</bytes>
+
+<sentBytes>true</sentBytes>
+
+<url>true</url>
+
+<threadCounts>true</threadCounts>
+
+<idleTime>true</idleTime>
+
+<connectTime>true</connectTime>
+
+</value>
+
+</objProp>
+
+<stringProp name="filename"/>
+
+</ResultCollector>
+
+<hashTree/>
+
+</hashTree>
+
+
+-<HTTPSamplerProxy enabled="true" testname="HTTP Request Delete" testclass="HTTPSamplerProxy" guiclass="HttpTestSampleGui">
+
+
+-<elementProp enabled="true" testname="User Defined Variables" testclass="Arguments" guiclass="HTTPArgumentsPanel" name="HTTPsampler.Arguments" elementType="Arguments">
+
+
+-<collectionProp name="Arguments.arguments">
+
+
+-<elementProp name="userId" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value">1</stringProp>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+<stringProp name="Argument.name">userId</stringProp>
+
+</elementProp>
+
+
+-<elementProp name="Id" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value">1</stringProp>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+<stringProp name="Argument.name">Id</stringProp>
+
+</elementProp>
+
+
+-<elementProp name="title" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value">hw24</stringProp>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+<stringProp name="Argument.name">title</stringProp>
+
+</elementProp>
+
+
+-<elementProp name="body" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value">lesson</stringProp>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+<stringProp name="Argument.name">body</stringProp>
+
+</elementProp>
+
+
+-<elementProp name="" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value"/>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+</elementProp>
+
+
+-<elementProp name="" elementType="HTTPArgument">
+
+<boolProp name="HTTPArgument.always_encode">false</boolProp>
+
+<stringProp name="Argument.value"/>
+
+<stringProp name="Argument.metadata">=</stringProp>
+
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+
+</elementProp>
+
+</collectionProp>
+
+</elementProp>
+
+<stringProp name="HTTPSampler.domain">jsonplaceholder.typicode.com</stringProp>
+
+<stringProp name="HTTPSampler.port"/>
+
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+
+<stringProp name="HTTPSampler.contentEncoding"/>
+
+<stringProp name="HTTPSampler.path">/posts/1</stringProp>
+
+<stringProp name="HTTPSampler.method">DELETE</stringProp>
+
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+
+<boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+
+<stringProp name="HTTPSampler.embedded_url_re"/>
+
+<stringProp name="HTTPSampler.connect_timeout"/>
+
+<stringProp name="HTTPSampler.response_timeout"/>
+
+</HTTPSamplerProxy>
+
+
+-<hashTree>
+
+
+-<ResultCollector enabled="true" testname="View Results Tree" testclass="ResultCollector" guiclass="ViewResultsFullVisualizer">
+
+<boolProp name="ResultCollector.error_logging">false</boolProp>
+
+
+-<objProp>
+
+<name>saveConfig</name>
+
+
+-<value class="SampleSaveConfiguration">
+
+<time>true</time>
+
+<latency>true</latency>
+
+<timestamp>true</timestamp>
+
+<success>true</success>
+
+<label>true</label>
+
+<code>true</code>
+
+<message>true</message>
+
+<threadName>true</threadName>
+
+<dataType>true</dataType>
+
+<encoding>false</encoding>
+
+<assertions>true</assertions>
+
+<subresults>true</subresults>
+
+<responseData>false</responseData>
+
+<samplerData>false</samplerData>
+
+<xml>false</xml>
+
+<fieldNames>true</fieldNames>
+
+<responseHeaders>false</responseHeaders>
+
+<requestHeaders>false</requestHeaders>
+
+<responseDataOnError>false</responseDataOnError>
+
+<saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+
+<assertionsResultsToSave>0</assertionsResultsToSave>
+
+<bytes>true</bytes>
+
+<sentBytes>true</sentBytes>
+
+<url>true</url>
+
+<threadCounts>true</threadCounts>
+
+<idleTime>true</idleTime>
+
+<connectTime>true</connectTime>
+
+</value>
+
+</objProp>
+
+<stringProp name="filename"/>
+
+</ResultCollector>
+
+<hashTree/>
+
+
+-<SizeAssertion enabled="true" testname="Size Assertion" testclass="SizeAssertion" guiclass="SizeAssertionGui">
+
+<stringProp name="Assertion.test_field">SizeAssertion.response_network_size</stringProp>
+
+<stringProp name="SizeAssertion.size">10</stringProp>
+
+<intProp name="SizeAssertion.operator">3</intProp>
+
+</SizeAssertion>
+
+<hashTree/>
+
+</hashTree>
+
+
+-<ResultCollector enabled="true" testname="Summary Report" testclass="ResultCollector" guiclass="SummaryReport">
+
+<boolProp name="ResultCollector.error_logging">false</boolProp>
+
+
+-<objProp>
+
+<name>saveConfig</name>
+
+
+-<value class="SampleSaveConfiguration">
+
+<time>true</time>
+
+<latency>true</latency>
+
+<timestamp>true</timestamp>
+
+<success>true</success>
+
+<label>true</label>
+
+<code>true</code>
+
+<message>true</message>
+
+<threadName>true</threadName>
+
+<dataType>true</dataType>
+
+<encoding>false</encoding>
+
+<assertions>true</assertions>
+
+<subresults>true</subresults>
+
+<responseData>false</responseData>
+
+<samplerData>false</samplerData>
+
+<xml>false</xml>
+
+<fieldNames>true</fieldNames>
+
+<responseHeaders>false</responseHeaders>
+
+<requestHeaders>false</requestHeaders>
+
+<responseDataOnError>false</responseDataOnError>
+
+<saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+
+<assertionsResultsToSave>0</assertionsResultsToSave>
+
+<bytes>true</bytes>
+
+<sentBytes>true</sentBytes>
+
+<url>true</url>
+
+<threadCounts>true</threadCounts>
+
+<idleTime>true</idleTime>
+
+<connectTime>true</connectTime>
+
+</value>
+
+</objProp>
+
+<stringProp name="filename"/>
+
+</ResultCollector>
+
+<hashTree/>
+
+
+-<ResultCollector enabled="true" testname="Graph Results" testclass="ResultCollector" guiclass="GraphVisualizer">
+
+<boolProp name="ResultCollector.error_logging">false</boolProp>
+
+
+-<objProp>
+
+<name>saveConfig</name>
+
+
+-<value class="SampleSaveConfiguration">
+
+<time>true</time>
+
+<latency>true</latency>
+
+<timestamp>true</timestamp>
+
+<success>true</success>
+
+<label>true</label>
+
+<code>true</code>
+
+<message>true</message>
+
+<threadName>true</threadName>
+
+<dataType>true</dataType>
+
+<encoding>false</encoding>
+
+<assertions>true</assertions>
+
+<subresults>true</subresults>
+
+<responseData>false</responseData>
+
+<samplerData>false</samplerData>
+
+<xml>false</xml>
+
+<fieldNames>true</fieldNames>
+
+<responseHeaders>false</responseHeaders>
+
+<requestHeaders>false</requestHeaders>
+
+<responseDataOnError>false</responseDataOnError>
+
+<saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+
+<assertionsResultsToSave>0</assertionsResultsToSave>
+
+<bytes>true</bytes>
+
+<sentBytes>true</sentBytes>
+
+<url>true</url>
+
+<threadCounts>true</threadCounts>
+
+<idleTime>true</idleTime>
+
+<connectTime>true</connectTime>
+
+</value>
+
+</objProp>
+
+<stringProp name="filename"/>
+
+</ResultCollector>
+
+<hashTree/>
+
+
+-<ResultCollector enabled="true" testname="Response Time Graph" testclass="ResultCollector" guiclass="RespTimeGraphVisualizer">
+
+<boolProp name="ResultCollector.error_logging">false</boolProp>
+
+
+-<objProp>
+
+<name>saveConfig</name>
+
+
+-<value class="SampleSaveConfiguration">
+
+<time>true</time>
+
+<latency>true</latency>
+
+<timestamp>true</timestamp>
+
+<success>true</success>
+
+<label>true</label>
+
+<code>true</code>
+
+<message>true</message>
+
+<threadName>true</threadName>
+
+<dataType>true</dataType>
+
+<encoding>false</encoding>
+
+<assertions>true</assertions>
+
+<subresults>true</subresults>
+
+<responseData>false</responseData>
+
+<samplerData>false</samplerData>
+
+<xml>false</xml>
+
+<fieldNames>true</fieldNames>
+
+<responseHeaders>false</responseHeaders>
+
+<requestHeaders>false</requestHeaders>
+
+<responseDataOnError>false</responseDataOnError>
+
+<saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+
+<assertionsResultsToSave>0</assertionsResultsToSave>
+
+<bytes>true</bytes>
+
+<sentBytes>true</sentBytes>
+
+<url>true</url>
+
+<threadCounts>true</threadCounts>
+
+<idleTime>true</idleTime>
+
+<connectTime>true</connectTime>
+
+</value>
+
+</objProp>
+
+<stringProp name="filename"/>
+
+</ResultCollector>
+
+<hashTree/>
+
+</hashTree>
+
+</hashTree>
+
+</hashTree>
+
+</jmeterTestPlan>
